@@ -285,15 +285,15 @@ body {
 
     .minimal-headline {
         font-size: 0.6rem;
-        display: flex;
-        flex-direction: column;
-        /* Stack categories */
-        gap: 0.5rem;
+        display: block;
+        /* revert flex/column */
+        margin-top: 1rem;
     }
 
     .divider {
-        display: none;
-        /* Hide slashes when stacked */
+        display: inline;
+        /* ensure visible */
+        padding: 0 0.2rem;
     }
 
     .tagline-minimal {
