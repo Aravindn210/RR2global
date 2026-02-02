@@ -15,7 +15,7 @@
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     overflow: hidden;
     height: 100vh;
     width: 100%;
@@ -41,14 +41,16 @@ body {
 
 /* Navigation */
 .nav-logo {
-    height: 40px;
+    height: 60px;
+    /* Increased size to show the logo better */
     width: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .nav-logo:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .status-minimal {
@@ -110,7 +112,7 @@ body {
     letter-spacing: 1.5rem;
     margin-right: -1.5rem;
     /* Center letter spacing */
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(to bottom, #fff 0%, #444 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -118,13 +120,22 @@ body {
 }
 
 .minimal-headline {
-    font-size: clamp(0.7rem, 2vw, 1rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     letter-spacing: 0.5rem;
     margin-right: -0.5rem;
     text-transform: uppercase;
     font-weight: 300;
     color: var(--primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tagline-minimal {
+    font-size: 0.75rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
 .divider {
