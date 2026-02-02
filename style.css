@@ -137,22 +137,18 @@ body {
 }
 
 .accent-tagline {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
-    /* Regular weight for elegance */
-    font-size: clamp(1.2rem, 4vw, 1.8em);
-    /* Responsive sizing */
-    color: #ffffff;
-    background: none;
-    /* Remove gradient */
-    -webkit-text-fill-color: initial;
-    text-shadow: 0 0 15px rgba(72, 198, 182, 0.4);
-    /* Subtle brand glow */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 1.4em);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: block;
-    /* Make it stand out on its own line */
     margin-bottom: 0.5rem;
-    letter-spacing: 0.02em;
+    text-shadow: none;
 }
 
 .divider {
