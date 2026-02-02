@@ -213,7 +213,24 @@ body {
 }
 
 /* Mobile Adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        /* Allow scrolling on small screens */
+        height: auto;
+        /* Remove fixed height constraint */
+    }
+
+    .minimal-wrapper {
+        height: auto;
+        /* Allow wrapper to grow */
+        min-height: 100vh;
+        /* Ensure it still covers at least full screen */
+        padding-bottom: 2rem;
+        /* Give some bottom breathing room */
+    }
+
     .minimal-brand {
         letter-spacing: 0.8rem;
         margin-right: -0.8rem;
@@ -222,11 +239,15 @@ body {
         background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         color: white !important;
+        margin-top: 3rem;
+        /* Add some top margin so it doesn't hit nav */
     }
 
     .minimal-subtext {
         padding: 0 20px;
         font-size: 0.85rem;
+        margin-bottom: 3rem;
+        /* Push footer down */
     }
 
     .minimal-headline {
@@ -241,7 +262,8 @@ body {
 
     .bottom-area .container {
         flex-direction: column-reverse;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
+        padding-bottom: 2rem;
     }
 }
