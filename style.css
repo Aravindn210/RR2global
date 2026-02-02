@@ -29,7 +29,6 @@ body {
     height: 100%;
     z-index: -1;
     opacity: 0.3;
-    /* More subtle */
 }
 
 .minimal-wrapper {
@@ -42,7 +41,6 @@ body {
 /* Navigation */
 .nav-logo {
     height: 60px;
-    /* Increased size to show the logo better */
     width: auto;
     opacity: 0.9;
     transition: opacity 0.3s, transform 0.3s;
@@ -111,12 +109,12 @@ body {
     font-weight: 200;
     letter-spacing: 1.5rem;
     margin-right: -1.5rem;
-    /* Center letter spacing */
     margin-bottom: 1.5rem;
     background: linear-gradient(to bottom, #fff 0%, #444 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: white;
 }
 
 .minimal-headline {
@@ -219,6 +217,16 @@ body {
     .minimal-brand {
         letter-spacing: 0.8rem;
         margin-right: -0.8rem;
+        background: linear-gradient(to bottom, #fff 0%, #aaa 100%) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: white !important;
+    }
+
+    .minimal-subtext {
+        padding: 0 20px;
+        font-size: 0.85rem;
     }
 
     .minimal-headline {
