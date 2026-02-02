@@ -1,0 +1,228 @@
+:root {
+    --primary: #48C6B6;
+    --bg: #000000;
+    --text: #ffffff;
+    --text-muted: #888888;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    /* More subtle */
+}
+
+.minimal-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Navigation */
+.nav-logo {
+    height: 40px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-logo:hover {
+    opacity: 1;
+}
+
+.status-minimal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.status-msg-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+/* Main Content */
+.content-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimal-brand {
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    font-weight: 200;
+    letter-spacing: 1.5rem;
+    margin-right: -1.5rem;
+    /* Center letter spacing */
+    margin-bottom: 2rem;
+    background: linear-gradient(to bottom, #fff 0%, #444 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.minimal-headline {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    letter-spacing: 0.5rem;
+    margin-right: -0.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.divider {
+    color: #333;
+    padding: 0 1rem;
+}
+
+.reveal-line {
+    width: 40px;
+    height: 1px;
+    background: #333;
+    margin: 2rem auto;
+}
+
+.minimal-subtext {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--text-muted);
+    font-weight: 200;
+    line-height: 2;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.social-links-minimal {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links-minimal a {
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links-minimal a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.copy-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.2rem;
+    color: #333;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 2s var(--ease) forwards;
+}
+
+.fade-in-delay-1 {
+    opacity: 0;
+    animation: fadeIn 2s var(--ease) 0.5s forwards;
+}
+
+.fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeIn 2s var(--ease) 1s forwards;
+}
+
+.fade-in-delay-3 {
+    opacity: 0;
+    animation: fadeIn 2s var(--ease) 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .minimal-brand {
+        letter-spacing: 0.8rem;
+        margin-right: -0.8rem;
+    }
+
+    .minimal-headline {
+        letter-spacing: 0.2rem;
+        margin-right: -0.2rem;
+        font-size: 0.65rem;
+    }
+
+    .divider {
+        padding: 0 0.5rem;
+    }
+
+    .bottom-area .container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+}
