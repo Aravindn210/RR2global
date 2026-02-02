@@ -262,8 +262,8 @@ body {
     }
 
     .bottom-area .container {
-        flex-direction: column-reverse;
-        /* Stack footer elements */
+        flex-direction: column;
+        /* Stack footer elements: Social First, then Copy */
         gap: 2rem;
         text-align: center;
         padding-bottom: 3rem;
