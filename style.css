@@ -136,6 +136,16 @@ body {
     margin-top: 1rem;
 }
 
+.accent-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
 .divider {
     color: #333;
     padding: 0 1rem;
