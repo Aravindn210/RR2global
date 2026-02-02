@@ -139,11 +139,15 @@ body {
 .accent-tagline {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: 1.3em;
-    color: #fff;
+    font-weight: 600;
+    font-size: 1.5em;
+    background: linear-gradient(90deg, #ffffff 0%, #48C6B6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
 }
 
 .divider {
