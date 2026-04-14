@@ -18,6 +18,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         :root {
             --sidebar-width: 280px;
             --admin-bg: #000000;
@@ -530,11 +534,10 @@
             }
 
             .table-wrap {
-                padding: 10px;
+                padding: 15px 0;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
-                margin: 0 -10px;
-                width: calc(100% + 20px);
+                width: 100%;
             }
 
             .custom-table {
@@ -583,6 +586,17 @@
             .welcome-header p { font-size: 0.9rem; }
             .stat-data p { font-size: 1.3rem; }
             .icon-box { width: 45px; height: 45px; font-size: 1.2rem; margin-right: 12px; }
+            
+            .card-top { align-items: center; text-align: center; }
+            .card-top h3 { justify-content: center; width: 100%; }
+        }
+        
+        /* Global protection */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
     </style>
 </head>
