@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR2 Global | Leading Events Innovation</title>
+    <meta name="description"
+        content="RR2 GLOBAL - Pioneers in Events, Exhibitions, and Interiors. We don't just build spaces, we create experiences.">
+    <!-- Bootstrap CSS (Optional but keeps layout helpful) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&family=Playfair+Display:ital,wght@1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=3">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="minimal-wrapper d-flex flex-column justify-content-between">
+        <!-- Top Navigation / Logo -->
+        <nav class="top-nav fade-in">
+            <div class="container d-flex justify-content-between align-items-center py-4">
+                <img src="assets/RR2_SECONDARY LOGO - TURQUOISE.png" alt="RR2 Logo" class="nav-logo">
+                <div class="status-minimal">
+                    <i class="fa-solid fa-globe globe-icon"></i>
+                    <span id="location-text" class="status-msg-text">Dubai</span>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="content-center text-center container">
+            <div class="hero-section">
+                <h1 class="minimal-brand fade-in-delay-1">COMING SOON</h1>
+                <h2 class="minimal-headline fade-in-delay-2">
+                    Events <span class="divider">|</span> Exhibitions <span class="divider">|</span> Interiors
+                </h2>
+                <div class="reveal-line fade-in-delay-2"></div>
+                <p class="minimal-subtext fade-in-delay-3">
+                    <img src="assets/we dont-2.png" alt="We Don't Do Ordinary" class="we-dont-ordinary-img"> <br>
+                    <!-- Our digital domain arrives in 2026. -->
+                </p>
+                <div class="newsletter-wrapper fade-in-delay-3 mt-4">
+                    <div id="newsletter-input-wrapper">
+                        <p class="newsletter-label">Enter your details to subscribe to our newsletter</p>
+                        <form id="subscribe-form" class="newsletter-form">
+                            <!-- Security: Honeypot (Hidden from users) -->
+                            <div class="hp-check" aria-hidden="true">
+                                <input type="text" name="_honey_trap" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <!-- User Information -->
+                            <input type="text" id="subscriber-name" name="name" class="newsletter-input" placeholder="Full Name" required autocomplete="off">
+                            <input type="email" id="subscriber-email" name="email" class="newsletter-input" placeholder="Your Email Address" required autocomplete="off">
+                            
+                            <!-- Static Redirect for FormSubmit (Fallback) -->
+                            <!-- reCAPTCHA v2 Checkbox -->
+                            <div class="g-recaptcha mt-3" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+                            
+                            <button type="submit" id="subscribe-btn" class="newsletter-btn mt-3">Subscribe</button>
+                        </form>
+                    </div>
+                    <div id="thank-you-msg" class="thank-you-msg" style="display: none;">
+                        <h4 class="thank-you-heading">Thank You!</h4>
+                        <p class="thank-you-text">Thank you for subscribing. You will get our updates directly through email.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="bottom-area fade-in-delay-3">
+    <div class="container d-flex justify-content-between align-items-center py-4">
+
+        <!-- Social Links -->
+        <div class="social-links-minimal d-flex gap-3 flex-wrap">
+
+            <!-- RR2 Global -->
+            <a href="https://www.instagram.com/rr2.global" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/rr2.global" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@rr2.global" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/company/rr2globalco" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@rr2.global" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:hello@rr2-global.com"><i class="fa-solid fa-envelope"></i></a>
+
+            <!-- Divider -->
+            <!--<span class="mx-2 text-muted">|</span>-->
+
+            <!-- Revamp Project Label -->
+            <!--<span class="text-muted small">The Revamp Project by RR2</span>-->
+
+            <!-- Revamp Project Links -->
+            <!--<a href="https://www.instagram.com/rr2.revampproject" target="_blank"><i class="fab fa-instagram"></i></a>-->
+            <!--<a href="https://www.facebook.com/rr2.revampproject" target="_blank"><i class="fab fa-facebook-f"></i></a>-->
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="copy-text">
+            © 2026 RR2 GLOBAL
+        </div>
+
+    </div>
+</footer>
+    </div>
+    <!-- Script stays the same or simplified -->
+    <script src="script.js"></script>
+</body>
+
+</html>
