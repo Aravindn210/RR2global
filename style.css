@@ -499,6 +499,22 @@ body {
     color: var(--bg);
 }
 
+.verification-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    overflow: visible;
+}
+
+/* Scaling reCAPTCHA for mobile screens below 350px */
+@media (max-width: 350px) {
+    .g-recaptcha {
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+}
+
 @media (max-width: 576px) {
     .newsletter-form {
         flex-direction: column;
